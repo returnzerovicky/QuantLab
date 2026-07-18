@@ -1,0 +1,20 @@
+{
+  "trading": {
+    "initial_capital": 10000.0,
+    "commission_pct": 0.001,
+    "risk_free_rate": 0.02
+  },
+  "market_data": {
+    "default_tickers": [
+      "AAPL",
+      "MSFT",
+      "TSLA",
+      "GLD"
+    ],
+    "benchmark": "SPY"
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}
