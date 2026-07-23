@@ -1,6 +1,0 @@
-{
-  "name": "QuantLab",
-  "description": "A production-grade Quantitative Trading & Portfolio Analytics Laboratory containing a full Python backtesting repository and an interactive, real-time web simulation dashboard.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
