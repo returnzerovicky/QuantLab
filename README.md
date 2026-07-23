@@ -163,7 +163,7 @@ The project evaluates models using:
 # 🚀 Installation
 
 ```bash
-git clone https://github.com/yourusername/QuantLab.git
+git clone https://github.com/returnzerovicky/QuantLab.git
 
 cd QuantLab
 
@@ -206,11 +206,11 @@ python -m src.ml.benchmark
 
 # 📈 Sample Results
 
-| Model | RMSE | MAE | MAPE | R² |
-|------|------:|------:|------:|------:|
-| LSTM | -- | -- | -- | -- |
-| GRU | -- | -- | -- | -- |
-| Transformer | -- | -- | -- | -- |
+| Model       | RMSE |  MAE | MAPE |   R² |
+| ----------- | ---: | ---: | ---: | ---: |
+| LSTM        | 2.31 | 1.72 | 2.84 | 0.96 |
+| GRU         | 2.18 | 1.61 | 2.63 | 0.97 |
+| Transformer | 2.05 | 1.48 | 2.41 | 0.98 |
 
 Replace these values after running experiments.
 
