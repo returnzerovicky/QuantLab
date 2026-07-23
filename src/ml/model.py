@@ -19,12 +19,12 @@ class LSTMModel(nn.Module):
         self.num_layers = config.num_layers
 
         self.lstm = nn.LSTM(
-            input_size=config.input_size,
-            hidden_size=config.hidden_size,
-            num_layers=config.num_layers,
-            batch_first=True,
-            dropout=config.dropout
-        )
+    input_size=config.input_size,
+    hidden_size=config.hidden_size,
+    num_layers=config.num_layers,
+    batch_first=True,
+    dropout=config.dropout if config.num_layers > 1 else 0.0
+)
 
         self.dropout = nn.Dropout(config.dropout)
 
@@ -70,12 +70,12 @@ class GRUModel(nn.Module):
         self.num_layers = config.num_layers
 
         self.gru = nn.GRU(
-            input_size=config.input_size,
-            hidden_size=config.hidden_size,
-            num_layers=config.num_layers,
-            batch_first=True,
-            dropout=config.dropout
-        )
+    input_size=config.input_size,
+    hidden_size=config.hidden_size,
+    num_layers=config.num_layers,
+    batch_first=True,
+    dropout=config.dropout if config.num_layers > 1 else 0.0
+)
 
         self.dropout = nn.Dropout(config.dropout)
 
