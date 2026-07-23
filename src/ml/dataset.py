@@ -36,9 +36,9 @@ class StockDataset(Dataset):
         )
 
         self.y = torch.tensor(
-            labels,
-            dtype=torch.float32
-        )
+    labels,
+    dtype=torch.float32
+).unsqueeze(1)
 
     def __len__(self):
         return len(self.x)
@@ -84,7 +84,7 @@ class DataProcessor:
 
         for i in range(window, len(data)):
             x.append(data[i-window:i])
-            y.append(data[i])
+            y.append(data[i][0])
 
         return np.array(x), np.array(y)
 
