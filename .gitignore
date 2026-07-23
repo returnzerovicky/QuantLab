@@ -1,8 +1,44 @@
-node_modules/
-build/
-dist/
-coverage/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyTorch
+*.pth
+
+# Mac/Linux
 .DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
 *.log
-.env*
-!.env.example
+
+# Cache
+.cache/
+
+# Data
+data/*.csv
+data/*.xlsx
+
+# Models
+models/*.pth
+
+# Reports
+reports/*.png
+
+# Experiments
+experiments/*.csv
