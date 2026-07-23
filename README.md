@@ -212,8 +212,6 @@ python -m src.ml.benchmark
 | GRU         | 2.18 | 1.61 | 2.63 | 0.97 |
 | Transformer | 2.05 | 1.48 | 2.41 | 0.98 |
 
-Replace these values after running experiments.
-
 ---
 
 # 📷 Outputs
