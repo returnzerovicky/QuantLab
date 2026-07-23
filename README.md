@@ -1,17 +1,14 @@
 <div align="center">
 
-# 📈 QuantLab
+# 📈 QuantLab AI
+### Deep Learning for Financial Time Series Forecasting
 
-### Quantitative Analytics & Portfolio Management Workspace
+Predicting stock prices using **LSTM**, **GRU**, and **Transformer** architectures built with **PyTorch**.
 
-*A production-grade quantitative finance platform for portfolio optimization, institutional risk analytics, trading strategy backtesting, and financial market research.*
-
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly)
-![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy)
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?logo=pytorch)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
 
@@ -19,149 +16,151 @@
 
 # 🚀 Overview
 
-QuantLab is a production-grade quantitative finance platform designed for market research, portfolio optimization, algorithmic strategy evaluation, and institutional risk analytics.
+QuantLab AI is a production-style deep learning framework for financial time-series forecasting.
 
-The platform enables users to:
+The project implements and benchmarks multiple neural network architectures for stock price prediction using historical market data from Yahoo Finance.
 
-- Analyze historical market data
-- Optimize investment portfolios
-- Evaluate trading strategies
-- Measure financial risk
-- Visualize market performance
-- Compare portfolio performance with benchmark indices
+Unlike a basic stock predictor, QuantLab is designed as a reusable ML pipeline with:
+
+- Automated data collection
+- Data preprocessing
+- Sliding window sequence generation
+- Multiple deep learning models
+- Training pipeline
+- Evaluation metrics
+- Benchmarking
+- Future price prediction
 
 ---
 
 # ✨ Features
 
-## 📊 Market Analytics
-
-- Historical Market Data
-- Portfolio Performance Analysis
-- Multi-Asset Support
-- Interactive Financial Dashboard
-
----
-
-## 📈 Technical Indicators
-
-- Simple Moving Average (SMA)
-- Exponential Moving Average (EMA)
-- Relative Strength Index (RSI)
-- MACD
-- Bollinger Bands
-- Average True Range (ATR)
+- Historical stock data download using Yahoo Finance
+- Automatic preprocessing and scaling
+- Sliding window dataset creation
+- LSTM implementation
+- GRU implementation
+- Transformer implementation
+- Early stopping
+- Model checkpointing
+- Prediction visualization
+- Benchmark multiple models
+- Future stock price prediction
+- Modular production-ready codebase
 
 ---
 
-## 📉 Portfolio Optimization
+# 🏗 Project Architecture
 
-- Modern Portfolio Theory
-- Efficient Frontier
-- Maximum Sharpe Portfolio
-- Minimum Variance Portfolio
-- Portfolio Allocation
-- Correlation Matrix
-- Covariance Matrix
-
----
-
-## ⚠️ Risk Analytics
-
-- Sharpe Ratio
-- Sortino Ratio
-- Information Ratio
-- Treynor Ratio
-- Calmar Ratio
-- Alpha
-- Beta
-- Maximum Drawdown
-- Annualized Volatility
-- Historical Value at Risk (VaR)
-- Parametric VaR
-- Conditional Value at Risk (CVaR)
-
----
-
-## 🤖 Strategy Backtesting
-
-- Buy & Hold
-- SMA Crossover
-- EMA Crossover
-- RSI Strategy
-- MACD Strategy
-
-Features include:
-
-- Transaction Cost Modelling
-- Slippage
-- One-Day Execution Lag
-- Benchmark Comparison
-- Equity Curve
-- Performance Reports
+```
+Yahoo Finance
+      │
+      ▼
+Data Download
+      │
+      ▼
+Preprocessing
+      │
+      ▼
+Sequence Generation
+      │
+      ▼
+PyTorch Dataset
+      │
+      ▼
+──────────────────────────────
+│ LSTM │ GRU │ Transformer │
+──────────────────────────────
+      │
+      ▼
+Training
+      │
+      ▼
+Evaluation
+      │
+      ▼
+Prediction
+      │
+      ▼
+Benchmark Results
+```
 
 ---
 
-# 🏗 Project Structure
+# 📂 Project Structure
 
-```text
+```
 QuantLab/
-│
-├── app.py
-├── requirements.txt
-├── config.json
-├── Dockerfile
-├── README.md
-│
+
+├── data/
+├── experiments/
+├── models/
+├── notebooks/
+├── reports/
+
 ├── src/
-│   ├── data_loader.py
-│   ├── indicators.py
-│   ├── metrics.py
-│   ├── portfolio.py
-│   ├── strategies.py
-│   ├── backtester.py
-│   ├── visualizer.py
-│   └── utils.py
-│
-├── tests/
-│
-└── .github/
-    └── workflows/
+│   └── ml/
+│       ├── benchmark.py
+│       ├── config.py
+│       ├── dataset.py
+│       ├── evaluate.py
+│       ├── losses.py
+│       ├── model.py
+│       ├── predict.py
+│       ├── train.py
+│       └── utils.py
+
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# 📊 Performance Metrics
+# 🧠 Models
 
-QuantLab evaluates portfolios using institutional quantitative metrics.
+## LSTM
 
-- CAGR
-- Sharpe Ratio
-- Sortino Ratio
-- Alpha
-- Beta
-- Calmar Ratio
-- Information Ratio
-- Maximum Drawdown
-- Profit Factor
-- Rolling Sharpe Ratio
-- Rolling Volatility
+Long Short-Term Memory networks capture long-range dependencies within sequential financial data.
 
 ---
 
-# 📷 Dashboard
+## GRU
 
-> Add screenshots of the Streamlit dashboard here.
-
-```
-assets/dashboard.png
-assets/backtest.png
-assets/risk.png
-```
+A lightweight recurrent architecture that trains faster while maintaining strong predictive performance.
 
 ---
 
-# ⚙️ Installation
+## Transformer
+
+Attention-based sequence modeling capable of learning global temporal relationships without recurrence.
+
+---
+
+# ⚙ Tech Stack
+
+- Python
+- PyTorch
+- NumPy
+- Pandas
+- Scikit-Learn
+- Matplotlib
+- yFinance
+- tqdm
+
+---
+
+# 📊 Evaluation Metrics
+
+The project evaluates models using:
+
+- RMSE
+- MAE
+- MAPE
+- R² Score
+
+---
+
+# 🚀 Installation
 
 ```bash
 git clone https://github.com/yourusername/QuantLab.git
@@ -169,81 +168,102 @@ git clone https://github.com/yourusername/QuantLab.git
 cd QuantLab
 
 pip install -r requirements.txt
-
-streamlit run app.py
 ```
 
 ---
 
-# 🧪 Running Tests
+# 🏃 Train
 
 ```bash
-pytest
+python -m src.ml.train
 ```
 
 ---
 
-# 🐳 Docker
+# 📈 Evaluate
 
 ```bash
-docker build -t quantlab .
-
-docker run -p 8501:8501 quantlab
+python -m src.ml.evaluate
 ```
 
 ---
 
-# 🛠 Tech Stack
+# 🔮 Predict
 
-- Python
-- Pandas
-- NumPy
-- SciPy
-- Plotly
-- Streamlit
-- yFinance
-- Scikit-Learn
-- GitHub Actions
-- Docker
+```bash
+python -m src.ml.predict
+```
 
 ---
 
-# 📌 Future Improvements
+# 📊 Benchmark
 
-- Live Market Data
-- Options Pricing Models
-- Monte Carlo Simulation
-- Black-Scholes Model
-- Portfolio Rebalancing
-- Reinforcement Learning Strategies
-- Multi-Factor Risk Models
+```bash
+python -m src.ml.benchmark
+```
 
 ---
 
-# ⭐ Repository Highlights
+# 📈 Sample Results
 
-✔ Production-grade Architecture
+| Model | RMSE | MAE | MAPE | R² |
+|------|------:|------:|------:|------:|
+| LSTM | -- | -- | -- | -- |
+| GRU | -- | -- | -- | -- |
+| Transformer | -- | -- | -- | -- |
 
-✔ Portfolio Optimization
-
-✔ Institutional Risk Analytics
-
-✔ Strategy Backtesting
-
-✔ Interactive Dashboard
-
-✔ CI/CD Pipeline
-
-✔ Docker Support
-
-✔ Unit Testing
-
-✔ Modular Python Codebase
+Replace these values after running experiments.
 
 ---
 
-<div align="center">
+# 📷 Outputs
 
-### ⭐ If you found this project useful, consider giving it a star!
+Add screenshots here after running the project.
 
-</div>
+```
+reports/
+├── prediction_plot.png
+├── benchmark_results.png
+├── training_loss.png
+```
+
+---
+
+# 🔬 Future Improvements
+
+- Multi-stock training
+- Hyperparameter tuning
+- Attention visualization
+- Ensemble forecasting
+- Hugging Face Time Series models
+- Probabilistic forecasting
+- Live market prediction API
+- Streamlit dashboard
+- Docker deployment
+- CI/CD pipeline
+
+---
+
+# 🎯 Key Learnings
+
+This project demonstrates:
+
+- Deep Learning
+- Time Series Forecasting
+- PyTorch
+- Model Benchmarking
+- Experiment Tracking
+- Financial Machine Learning
+- Production ML Engineering
+
+---
+
+# 👨‍💻 Author
+
+**Vikas**
+
+AI • Machine Learning • Deep Learning • Python • PyTorch
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!
