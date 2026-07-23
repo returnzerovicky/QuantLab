@@ -58,6 +58,8 @@ class Trainer:
             model_name
         ).to(device)
 
+        config.checkpoint_name = f"{model_name}_stock_model.pth"
+
         self.train_loader, self.test_loader, \
         self.scaler, self.df = get_dataloaders()
 
