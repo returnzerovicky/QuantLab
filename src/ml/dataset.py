@@ -134,7 +134,8 @@ class DataProcessor:
             train_dataset,
             batch_size=config.batch_size,
             shuffle=True,
-            num_workers=config.num_workers
+            num_workers=config.num_workers,
+            drop_last=True
         )
 
         test_loader = DataLoader(
