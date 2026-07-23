@@ -220,11 +220,12 @@ class Trainer:
             )
 
         save_checkpoint(
-            model=self.model,
-            optimizer=self.optimizer,
-            epoch=len(self.history["train_loss"]),
-            path=config.checkpoint_path
-        )
+    model=self.model,
+    optimizer=self.optimizer,
+    epoch=len(self.history["train_loss"]),
+    loss=self.early_stopping.best_loss,
+    path=config.checkpoint_path
+)
 
         metrics = {
             "best_validation_loss":
